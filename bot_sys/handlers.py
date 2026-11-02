@@ -46,7 +46,7 @@ async def direction_button_pick(call: CallbackQuery, state: FSMContext):
         user_score = data.get('user_score')
 
         await state.set_state(None)
-        await call.message.edit_text(text = txt.MESSAGES['grid_header'].format(#score = user_score,
+        await call.message.edit_text(text = txt.MESSAGES['grid_header'].format(score = user_score,
                                                         direction_name = serv.get_direction_name(dir_id)), 
                                                         reply_markup = kb.get_vuz_keyboard(user_score, 0, dir_id))
         return 
