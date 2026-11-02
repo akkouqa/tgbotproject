@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from aiogram import Router, F, Bot
 from aiogram.types import Message, CallbackQuery, InputMediaPhoto
 from aiogram.filters.command import Command, CommandStart
@@ -42,3 +43,21 @@ async def about_bot_page(call: CallbackQuery, state: FSMContext):
 
     await call.message.edit_text(text = txt.MESSAGES['about_text'],
                                  reply_markup = kb.menu(data.get('user_score', None)))
+=======
+from aiogram import Router, F, Bot
+from aiogram.types import Message, CallbackQuery, InputMediaPhoto
+from aiogram.filters.command import Command, CommandStart
+from aiogram.fsm.context import FSMContext
+from bot_sys import texts as txt
+from bot_sys import services as serv
+from bot_sys import keyboards as kb
+from bot_sys import states as st
+from bot_sys import data as db
+
+#использованные callback_data == menu_pick, to_page_, vuz_, to_grid_page_, menu_all, exit_to_menu
+
+
+router = Router()
+
+
+>>>>>>> 0dff2d58d5023ced76669f342a49bcb37339fe22
